@@ -1,0 +1,9 @@
+
+DEBUG = True
+ENV = 'development'
+SECRET_KEY = 'secret'
+
+SQLALCHEMY_DATABASE_URI = 'sqlite:///test.db'
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+NUMBER_OF_CHARACTERS = 3

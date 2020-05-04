@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Result{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <div class="row" style="margin-top: 20px;">
+            <a href="{{ url_for('shortener.index') }}">Main page</a>
+        </div>
+
+        <div class="row" style="margin-top: 20%;">
+            <div class="col-sm-12">
+                <p><strong>Original URL: </strong><i>{{ origin_url }}</i></p>
+            </div>
+            <div class="col-sm-12">
+                <p><strong>Short URL: </strong>
+                    <a href="{{ url_for('shortener.redirect_to', short_url=new_url, _external=True)}}" target="_blank">
+                        {{ url_for('shortener.redirect_to', short_url=new_url, _external=True)}}
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
